@@ -58,7 +58,7 @@ def get_all_regions(profile_name):
 
 def evaluate_network(subnetwork, network):
 
-	if subnetwork == '0.0.0.0/0':
+	if subnetwork == '0.0.0.0/0' or network == '0.0.0.0/0':
 		return True
 
 	return IPv4Network(unicode(subnetwork, 'utf-8')).overlaps(IPv4Network(unicode(network, 'utf-8')))
