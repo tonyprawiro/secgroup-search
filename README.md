@@ -40,7 +40,7 @@ You could specify a single region (`--regions ap-southeast-1`), multiple regions
 
 You could also specify to search egress rules. The argument `--egress` does not need any value.
 
-The search term can be an IP address e.g. `10.20.30.40/321, or network address e.g. `10.20.30.40/24`. The script will search your security groups CIDR where the network addresses overlap. Note that the default value for this argument is `0.0.0.0/0`, which will match any CIDR in the ingress/egress rules (always returns `True`). Note also that if CIDR in the security group ingress or egress is 0.0.0.0/0, it will also always return True.
+The search term can be an IP address e.g. `10.20.30.40/32`, or network address e.g. `10.20.30.40/24`. The script will search your security groups CIDR where the network addresses overlap. Note that the default value for this argument is `0.0.0.0/0`, which will match any CIDR in the ingress/egress rules (always returns `True`). Note also that if CIDR in the security group ingress or egress is 0.0.0.0/0, it will also always return True.
 
 Example:
 
