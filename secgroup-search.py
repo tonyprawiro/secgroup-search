@@ -147,7 +147,7 @@ def main():
 
 								result[region][security_group["GroupId"]]["GroupName"] = security_group["GroupName"]
 
-								if not "Ingress" in result[region][security_group["GroupId"]]:
+								if not "Egress" in result[region][security_group["GroupId"]]:
 									result[region][security_group["GroupId"]]["Egress"] = []
 
 								if cidr_ip not in result[region][security_group["GroupId"]]["Egress"]:
